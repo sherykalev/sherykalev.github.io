@@ -5,6 +5,13 @@ body, html {
     height: 100%;
 }
 
+h1 {
+    font-size: 2px; /* Default font size for all h1 elements */
+}
+h1.smaller {
+    font-size: 15px !important; /* Smaller font size for the second h1 */
+}
+
 .container {
     display: flex;
     height: 100vh;
