@@ -3,6 +3,7 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     height: 100%;
+    overflow: hidden; /* Prevent scrolling on the entire page */
 }
 
 .container {
@@ -16,6 +17,7 @@ body, html {
     color: white;
     padding: 20px;
     box-sizing: border-box;
+    overflow-y: auto; /* Enable vertical scrolling for the left panel */
 }
 
 .left-panel h2 {
