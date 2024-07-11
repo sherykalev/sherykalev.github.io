@@ -19,7 +19,7 @@ body, html {
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto; /* Enable vertical scrolling for the left panel */
-    flex: 1;
+    /* flex: 1; */
 }
 
 .left-panel h2 {
