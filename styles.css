@@ -180,6 +180,7 @@ body, html {
     .left-panel {
         width: 20%; /* Set left panel width for larger screens */
         height: 100vh; /* Full height */
+        margin: 0; /* Ensure no extra margin */
     }
 
     .right-panel {
@@ -188,6 +189,7 @@ body, html {
         right: 0;
         top: 0;
         bottom: 0;
+        margin: 0; /* Ensure no extra margin */
     }
 
     .mySlides img {
