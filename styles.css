@@ -9,15 +9,17 @@ body, html {
 .container {
     display: flex;
     height: 100vh;
+    flex-direction: column; /* Stack panels vertically by default */
 }
 
 .left-panel {
-    width: 20%;
+    width: 100%; /* Full width by default */
     background-color: #333;
     color: white;
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto; /* Enable vertical scrolling for the left panel */
+    flex: 1;
 }
 
 .left-panel h2 {
@@ -94,7 +96,7 @@ body, html {
 }
 
 .right-panel {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,6 +104,8 @@ body, html {
     box-sizing: border-box;
     padding: 0; /* Removed padding */
     margin: 0; /* Removed margin */
+    position: relative; /* Remove fixed position for mobile */
+    flex: 2;
 }
 
 .slideshow-container {
@@ -164,4 +168,25 @@ body, html {
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+}
+
+/* Media Queries for responsiveness */
+
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Align panels horizontally for larger screens */
+    }
+    
+    .left-panel {
+        width: 20%; /* Set left panel width for larger screens */
+        height: 100vh; /* Full height */
+    }
+
+    .right-panel {
+        width: 80%; /* Set right panel width for larger screens */
+        position: fixed; /* Fixed position for larger screens */
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
 }
