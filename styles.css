@@ -27,7 +27,7 @@ body, html {
 }
 
 .left-panel h3 {
-    margin-top: 50px; /* Increased margin for better spacing between h3 titles */
+    margin-top: 50px; /* Adjusted margin for better spacing between h3 titles */
     margin-bottom: 10px; /* Reduced margin below h3 titles for tighter spacing */
     font-size: 16px;
     opacity: 0.7;
@@ -48,6 +48,11 @@ body, html {
     text-decoration: none;
     font-size: 24px; /* Match the font size of h2 */
     line-height: 1.2; /* Tighter line height for links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.left-panel ul li a:hover {
+    color: #FF4C82; /* Change color on hover */
 }
 
 .right-panel {
