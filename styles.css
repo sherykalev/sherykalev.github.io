@@ -11,6 +11,7 @@ body, html {
     flex-direction: column; /* Stack panels vertically by default */
     height: 100vh;
     overflow-y: auto; /* Enable vertical scrolling for the entire container */
+    overflow-x: hidden; /* Disable horizontal scrolling */
 }
 
 .left-panel {
