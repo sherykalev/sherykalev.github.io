@@ -8,18 +8,18 @@ body, html {
 
 .container {
     display: flex;
+    flex-direction: column; /* Stack panels vertically by default */
     height: 100vh;
-    flex-direction: column-reverse; /* Stack left panel at the bottom and right panel at the top by default */
+    overflow-y: auto; /* Enable vertical scrolling for the entire container */
 }
 
 .left-panel {
+    order: 2; /* Ensure left panel appears at the bottom by default */
     width: 100%; /* Full width by default */
     background-color: #333;
     color: white;
     padding: 20px;
     box-sizing: border-box;
-    overflow-y: auto; /* Enable vertical scrolling for the left panel */
-    /* flex: 1; */
 }
 
 .left-panel h2 {
@@ -96,6 +96,7 @@ body, html {
 }
 
 .right-panel {
+    order: 1; /* Ensure right panel appears at the top by default */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -105,7 +106,6 @@ body, html {
     padding: 0; /* Removed padding */
     margin: 0; /* Removed margin */
     position: relative; /* Remove fixed position for mobile */
-    flex: 2;
 }
 
 .slideshow-container {
@@ -175,23 +175,24 @@ body, html {
 @media (min-width: 768px) {
     .container {
         flex-direction: row; /* Align panels horizontally for larger screens */
+        overflow-y: hidden; /* Disable vertical scrolling for the container */
     }
     
     .left-panel {
+        order: 1; /* Left panel should be first in larger screens */
         width: 20%; /* Set left panel width for larger screens */
-        /* height: 100vh; Full height */
-        height: auto;
-        margin: 0; /* Ensure no extra margin */
+        height: 100vh; /* Full height */
+        overflow-y: auto; /* Enable vertical scrolling for the left panel */
     }
 
     .right-panel {
+        order: 2; /* Right panel should be second in larger screens */
         width: 80%; /* Set right panel width for larger screens */
         position: fixed; /* Fixed position for larger screens */
         right: 0;
         top: 0;
         bottom: 0;
-        height: auto;
-        margin: 0; /* Ensure no extra margin */
+        overflow-y: auto; /* Enable vertical scrolling for the right panel */
     }
 
     .mySlides img {
