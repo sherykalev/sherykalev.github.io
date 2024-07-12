@@ -209,5 +209,5 @@ body, html {
 
 /* make "last link" div margin bottom 40px */
 .last-link {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
