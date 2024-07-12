@@ -204,3 +204,8 @@ body, html {
         height: 100%; /* Make images fill the height in larger screens */
     }
 }
+
+/* make "last link" div margin bottom 40px */
+.last-link {
+    margin-bottom: 40px;
+}
